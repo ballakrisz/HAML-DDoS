@@ -1,0 +1,5 @@
+image_name="ddos_detection"
+image_tag="v0.1"
+container_name="ddos_detection"
+src_folder="./src"
+requirements_file="./misc/requirements.txt"
