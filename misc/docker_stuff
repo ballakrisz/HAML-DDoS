@@ -1,0 +1,30 @@
+Docker:
+https://docs.docker.com/engine/install/ubuntu/ --> follow the apt repo steps
+after that:
+sudo groupadd docker
+sudo usermod -aG docker $USER
+(this way you don't need sudo for the docker commands, as you add yourself to the docker group)
+
+You also need nvidia-container toolkit to utilize your gpu in the container
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html --> follow the apt repo steps
+
+You might need to create a daemon.json file if docker does not recognize your gpu (i think they changed something in recent versions as you didn't need this earlier, but now you do)
+cat /etc/docker/daemon.json
+{
+  "runtimes": {
+    "nvidia": {
+       "path": "nvidia-container-runtime",
+       "runtimeArgs": []
+    }
+  } 
+}
+
+run this:
+cd /etc/docker
+touch daemon.json
+nano daemon.json (es copy-paste ami itt fennt van), utana ctrl+s majd ctrl+x
+
+Nvidia driver is kell a gepen.
+
+Rebootolni se felejts driver install, docker install, nvidia-container toolkit install utan
+
