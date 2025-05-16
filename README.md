@@ -12,7 +12,9 @@
 ```
 (the shell scripts should be executable, as github preserves file permissions)
 
-I recommend using vscode with the **Dev Containers** and **Docker** extensions. If you've installed them; On the **Docker** panel (left sidebar) right click on the running container and choose **attach visual studio code**.
+I recommend using vscode with the **Dev Containers** and **Docker** extensions. If you've installed them; On the **Docker** panel (left sidebar) right click on the running container and choose **attach visual studio code**.  
+
+Make sure that for the notebooks you select the **3.10.14 python kernel**, as that is where all the depencies are installed. 
 
 ## Running the project
 If you'd like to execute all of the provided code, please strictly follow this order:
